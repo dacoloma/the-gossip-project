@@ -16,8 +16,8 @@
       <tr>
         <td><%= gossip.anonymous_author %></td>
         <td><%= gossip.content %></td>
-        <td><%= link_to 'Show', gossip %></td>
-        <td><%= link_to 'Edit', edit_gossip_path(gossip) %></td>
+        <td><%= button_to 'Show', gossip, :class=>"btn btn-sm btn-outline-info", :method=>:get%></td>
+        <td><%= button_to 'Edit', edit_gossip_path(gossip), :class=>"btn btn-sm btn-outline-warning", :method=>:get%></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Gossip', new_gossip_path %>
+<%= button_to 'New Gossip', new_gossip_path, :class=>"btn btn-primary my-2", :method=>:get%>

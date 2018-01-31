@@ -9,11 +9,14 @@
     <label>Content</label>
     <%= f.text_field :content, class: 'form-control' %>
   </div>
-  <div class="form-group">
-    <button type="submit">Modifier</button>
-    <%= link_to 'Clique pour détruire', @gossip, method: :delete %>
+  <div>
+
+    <%= button_to 'Modifier', gossip_path(@gossip), :class=>"btn btn-sm btn-outline-warning", :method=>:patch%>
+    <%= button_to 'Détruire', @gossip, :class=>"btn btn-sm btn-danger", :method=>:delete%>
+    <!--<button class="btn btn-sm btn-outline-secondary"><%= link_to 'Détruire', @gossip, method: :delete %></button>
+  <button class="btn btn-sm btn-outline-secondary" type="submit">Modifier</button>-->
   </div>
 <% end %>
 
-<%= link_to 'Show', @gossip %> |
-<%= link_to 'Back', gossips_path %>
+<br />
+<%= button_to 'Back', gossips_path, :class=>"btn btn-sm btn-outline-secondary", :method=>:get %>
