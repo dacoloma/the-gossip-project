@@ -10,5 +10,6 @@
   <%= @gossip.content %>
 </p>
 
-<%= link_to 'Edit', edit_gossip_path(@gossip) %> |
-<%= link_to 'Back', gossips_path %>
+<%= button_to 'Edit', edit_gossip_path(@gossip), :class=>"btn btn-sm btn-outline-warning", :method=>:get%>
+<br />
+<%= button_to 'Back', gossips_path, :class=>"btn btn-sm btn-outline-secondary", :method=>:get %>

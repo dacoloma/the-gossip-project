@@ -9,10 +9,11 @@
     <label>Content</label>
     <%= f.text_field :content, class: 'form-control' %>
   </div>
-  <div class="form-group">
+  <div class="form-group btn btn-primary my-2">
+
     <%= f.submit "Create" %>
   </div>
 <% end %>
 
-
-<%= link_to 'Back', gossips_path %>
+<br />
+<%= button_to 'Back', gossips_path, :class=>"btn btn-sm btn-outline-secondary", :method=>:get %>
