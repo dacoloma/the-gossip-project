@@ -5,7 +5,6 @@ class GossipsController < ApplicationController
   # GET /gossips.json
   def index
     @gossips = Gossip.all
-    puts @gossips
   end
 
   # GET /gossips/1
